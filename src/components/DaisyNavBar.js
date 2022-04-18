@@ -1,3 +1,5 @@
+import CardWidget from "./CardWidget"
+
 const DaisyNavBar = () => {
   return (
     <div className="navbar bg-base-100">
@@ -8,6 +10,7 @@ const DaisyNavBar = () => {
         <div className="form-control">
         <input type="text" placeholder="Search" className="input input-bordered"/>
         </div>
+        <CardWidget/>
         <div className="dropdown dropdown-end">
         <label tabindex="0" className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
