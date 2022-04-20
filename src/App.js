@@ -5,10 +5,12 @@ import DaisyNavBar from "./components/DaisyNavBar";
 import Saludo from "./components/Saludo";
 import Card from "./components/Card";
 import ItemListContainer from "./components/ItemListContainer";
+import Contador from "./components/Contador";
+import Button from "./components/Button";
 
 function App() {
   const styles ={
-    title:"text-3xl font-bold font-mono text-blue-400"
+    title:"text-3xl font-bold font-mono text-blue-400",
   }
   return (
     <div className="App">
@@ -16,10 +18,14 @@ function App() {
       <NavBar/>
       <h1 className={styles.title}>¡Hola mundo con React!</h1>
       <Saludo name="Juan" edad="25"/>
-      <Card>
-      <Saludo name="Lucia" edad="25"/>
+      {/*<Card>
       </Card>
       <ItemListContainer/>
+  */}
+      <Contador></Contador>
+      <div>
+      <Button></Button>
+      </div>
     </div>
   )
 }
