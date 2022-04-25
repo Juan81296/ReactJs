@@ -1,32 +1,27 @@
-import logo from "./logo.svg";
 import "./App.css";
 import NavBar from"./components/NavBar";
 import DaisyNavBar from "./components/DaisyNavBar";
 import Saludo from "./components/Saludo";
-import Card from "./components/Card";
 import ItemListContainer from "./components/ItemListContainer";
 import Contador from "./components/Contador";
 import Button from "./components/Button";
-
 function App() {
-  const styles ={
-    title:"text-3xl font-bold font-mono text-blue-400",
+ const styles ={
+    title:"text-3xl font-bold font-mono text-brown-200",
   }
   return (
-    <div className="App">
+    <div className="App" style={{backgroundColor:"#151321"}}>
       <DaisyNavBar/>
-      <NavBar/>
-      <h1 className={styles.title}>¡Hola mundo con React!</h1>
-      <Saludo name="Juan" edad="25"/>
-      {/*<Card>
-      </Card>
-      <ItemListContainer/>
-  */}
+      <h1 className={styles.title}>Café</h1>
+      <Saludo/>
       <Contador></Contador>
       <div>
       <Button></Button>
       </div>
-    </div>
+      <div>
+      <ItemListContainer></ItemListContainer>
+      </div>
+      </div>
   )
 }
 
