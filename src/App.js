@@ -2,9 +2,10 @@ import "./App.css";
 import NavBar from"./components/NavBar";
 import DaisyNavBar from "./components/DaisyNavBar";
 import Saludo from "./components/Saludo";
-import ItemListContainer from "./components/ItemListContainer";
 import Contador from "./components/Contador";
 import Button from "./components/Button";
+import StarshipsContainer from "./components/swapi/StarshipsContainer";
+import CoffeContainer from "./components/coffe/CoffeContainer";
 function App() {
  const styles ={
     title:"text-3xl font-bold font-mono text-brown-200",
@@ -19,7 +20,8 @@ function App() {
       <Button></Button>
       </div>
       <div>
-      <ItemListContainer></ItemListContainer>
+      {/*<StarshipsContainer></StarshipsContainer>*/}
+      <CoffeContainer/>
       </div>
       </div>
   )
