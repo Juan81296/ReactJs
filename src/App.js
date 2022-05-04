@@ -11,6 +11,7 @@ import StarshipsDetail from "./components/swapi/StarshipsDetail";
 import CoffeDetail from "./components/coffe/CoffeDetail";
 import NoVocals from "./components/NoVocals";
 import Contacto from "./components/Contacto";
+import CardWidget from "./components/CardWidget";
 
 function App() {
   return (
@@ -19,10 +20,11 @@ function App() {
     <NavBar></NavBar>
         <Routes>
           <Route path="/" element={<CoffeContainer/>}></Route>
-          <Route path="/contador" element={<Contador/>}></Route>
           <Route path="/coffe/:coffeId" element={<CoffeDetail/>}></Route> 
           <Route path="/vocales" element ={<NoVocals></NoVocals>}></Route>
-          <Route path="/contacto  " element ={<Contacto/>}></Route>
+          <Route path="/contacto" element ={<Contacto/>}></Route>
+          <Route path="/carrito" element ={<CardWidget/>}></Route>
+
         </Routes>
     </BrowserRouter>
     </div>
