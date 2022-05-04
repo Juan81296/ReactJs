@@ -26,10 +26,10 @@ const Contador = () => {
     }
   return (
       <>
-          <div> Contador </div>
-          <button onClick={restHandler}> - </button>
+          <div style={{color:"white",fontSize:"30px"}}> Contador </div>
+          <button onClick={restHandler} style={{color:"white"}}> - </button>
           <strong> {count} </strong>
-          <button onClick ={addHandler} > + </button>  
+          <button onClick ={addHandler} style={{color:"white"}} > + </button>  
       </>
   )
 }

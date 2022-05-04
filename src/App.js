@@ -9,6 +9,8 @@ import CoffeContainer from "./components/coffe/CoffeContainer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import StarshipsDetail from "./components/swapi/StarshipsDetail";
 import CoffeDetail from "./components/coffe/CoffeDetail";
+import NoVocals from "./components/NoVocals";
+import Contacto from "./components/Contacto";
 
 function App() {
   return (
@@ -18,7 +20,9 @@ function App() {
         <Routes>
           <Route path="/" element={<CoffeContainer/>}></Route>
           <Route path="/contador" element={<Contador/>}></Route>
-          <Route path="/coffe/:coffeId" element={<CoffeDetail/>}></Route>
+          <Route path="/coffe/:coffeId" element={<CoffeDetail/>}></Route> 
+          <Route path="/vocales" element ={<NoVocals></NoVocals>}></Route>
+          <Route path="/contacto  " element ={<Contacto/>}></Route>
         </Routes>
     </BrowserRouter>
     </div>

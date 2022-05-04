@@ -8,7 +8,7 @@ const NavBar = () => {
     <div className="flex justify-center">
         <li style ={{color:"white",fontSize:"20px"}}><Link to={"/"}>Inicio</Link></li>
         <li style ={{color:"white",fontSize:"20px"}}><Link to={"/contador"}>Contador</Link></li>
-        <li style ={{color:"white",fontSize:"20px"}}>Contacto</li>
+        <li style ={{color:"white",fontSize:"20px"}}><Link to={"/contacto"}>Contacto</Link></li>
         <CardWidget/>
     </div>
 
