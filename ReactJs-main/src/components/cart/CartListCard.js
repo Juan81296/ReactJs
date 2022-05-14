@@ -1,9 +1,9 @@
 const CartListCard = ( { product } ) => {
   
     return (
-      <div>
+      <div style={{fontWeight:"bolder",paddingTop:"50px"}}>
         	<figure>
-					<img src={product.picUrl} alt="Product" />
+					<img style={{height:"300px",width:"200px"}} src={product.picUrl} alt="Product" />
 				</figure>
           {product.title}
       </div>
