@@ -1,9 +1,14 @@
-import { useCartContext } from "../context/CartContext"
+import CartContextProvider, { useCartContext } from "../context/CartContext"
 import CartListCard from "./CartListCard"
 
-const CartList = () => {
+
+  const CartList = ({ producto }) => {
+    const { deleteFromCart,deleteCart,cart } = useCartContext(CartContextProvider);
   
-  const { cart, deleteCart,deleteFromCart } = useCartContext()
+    const handleRemove = producto => {
+      deleteFromCart(producto);
+    }
+
   
   return (
     <>
@@ -16,10 +21,11 @@ const CartList = () => {
       { cart.map( f => <CartListCard key={f.id} product={f}/> ) }
        <button
        className="btn btn-success"
-       onClick={ () => { deleteFromCart() } }>
+       onClick={ () => { handleRemove(producto) } }>
          Eliminar Item
      </button>
      </>
   )
 }
+
 export default CartList

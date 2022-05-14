@@ -29,7 +29,7 @@ const CartContextProvider = ({ children }) => {
 		producto.quantity = cantidad
 		setCart([...newCart, producto])
 	}
-
+//Borrar item del carrito
 	const deleteFromCart = (producto) => {
 		const newCart = [...cart]
 
@@ -43,7 +43,7 @@ const CartContextProvider = ({ children }) => {
 
 		setCart(deleteProduct)
 	}
-
+//Vaciar carrito completo
 	const deleteCart = () => setCart([])
 
 	console.log(cart)

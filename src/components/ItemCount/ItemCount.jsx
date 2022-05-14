@@ -19,7 +19,7 @@ const ItemCount = ({ stock, onAdd, id }) => {
 		}
 	}
 
-	const handleClick = (id, cantidad) => {
+	const handleClick = (id, cantidad,title,picURL) => {
 		const findProduct = products.find((producto) => producto.id === id)
 
 		if (!findProduct) {
@@ -27,7 +27,7 @@ const ItemCount = ({ stock, onAdd, id }) => {
 			return
 		}
 
-		addToCart(findProduct, cantidad)
+		addToCart(findProduct, cantidad,title,picURL)
 		onAdd(count)
 	}
 
@@ -46,9 +46,10 @@ const ItemCount = ({ stock, onAdd, id }) => {
 				<div>
 					<button
 						className="btn btn-success"
-						onClick={() => handleClick(id, count)}
+						onClick={() => handleClick(id, count,)}
 					>
 						Agregar al Carrito
+
 					</button>
 				</div>
 			</div>
