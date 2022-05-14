@@ -45,9 +45,7 @@ const CartContextProvider = ({ children }) => {
 	}
 //Vaciar carrito completo
 	const deleteCart = () => setCart([])
-
-	console.log(cart)
-
+		
 	return (
 		<CartContext.Provider
 			value={{

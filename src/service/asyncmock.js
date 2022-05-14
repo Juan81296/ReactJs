@@ -51,7 +51,7 @@ const products = [
 		id: 4,
 		category: "camisetas",
 		title: "BARCELONA SUPLENTE 2002",
-		brand: "Zomo",
+		brand: "Nike",
 		price: 8150,
 		stock: 9,
 		picUrl: "https://cdn.shopify.com/s/files/1/0591/6196/8831/products/IMG_20210416_170100_3_370x.jpg?v=1635701549",

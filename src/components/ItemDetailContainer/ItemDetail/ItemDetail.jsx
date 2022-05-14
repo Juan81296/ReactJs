@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
-import cart from "../../cart/Cart"
 import ItemCount from "../../ItemCount/ItemCount"
 
 const ItemDetail = ({ producto }) => {
