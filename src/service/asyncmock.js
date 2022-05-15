@@ -63,7 +63,7 @@ const products = [
 		category: "camisetas",
 		title: "BRASIL TITULAR 2006",
 		brand: "Nike",
-		price: 500,
+		price: 5000,
 		stock: 9,
 		picUrl:
 			"https://cdn.shopify.com/s/files/1/0591/6196/8831/products/IMG-20210630-WA0050_370x.jpg?v=1630948617",
