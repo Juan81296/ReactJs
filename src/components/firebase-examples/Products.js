@@ -1,31 +1,28 @@
+import { collection, getDocs, getFirestore } from "firebase/firestore"
 import { useEffect, useState } from "react"
-import { collection, getDocs, getFirestore,} from "firebase/firestore"
+import ItemCount from "../ItemCount/ItemCount"
 
 const Products = () => {
-    
-    const [product, setProduct] = useState([])
 
-    useEffect(() => {
-        const db = getFirestore()
-        const itemsCollection = collection(db,"items")
-        getDocs(itemsCollection).then(snapshot =>{
-            const productList = []
-        snapshot.docs.forEach(s =>{
-            productList.push({id:s.id, ...s.data()})
-        })
-        console.log(productList)
-        setProduct(productList)
-        })
-    }, [])
-    
+  const [products, setProducts] = useState({})
+
+  useEffect(() => {
+
+    const db = getFirestore()
+
+    const itemsCollection = collection(db,"items");
+    getDocs(itemsCollection).then((snapshot)=>{
+      setProducts(snapshot.docs.map((doc) => ({id:doc.id, ...doc.data})))
+    })
+
+
+  }, [])
+  
+
+
 
   return (
-      <>
-    <div>Products</div>
-    <div> {product.map(p => <li>{p.title}</li>)} </div>
-    <div> {product.map(p => <li>{p.description}</li>)} </div>
-
-    </>
+    <div> {products.title} </div>
   )
 }
 export default Products

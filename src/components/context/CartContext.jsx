@@ -8,6 +8,8 @@ const CartContextProvider = ({ children }) => {
 	// Logica
 	const [cart, setCart] = useState([])
 
+	const quantity = () => cart.reduce((sum, i) => { return sum + i.quantity }, 0)
+
 	// Validar si está el item en el carrito
 	const isInCart = (id) => cart.find((producto) => producto.id === id)
 
@@ -54,6 +56,7 @@ const CartContextProvider = ({ children }) => {
 				deleteFromCart,
 				deleteCart,
 				setCart,
+				quantity
 			}}
 		>
 			{children}
