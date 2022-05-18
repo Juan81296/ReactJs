@@ -6,7 +6,7 @@ const ItemCount = ({ stock, onAdd, id }) => {
 	const [count, setCount] = useState(0)
 
 	const { addToCart } = useCartContext()
-	const { products } = useAppContext()
+	const { product } = useAppContext()
 
 	const handleAdd = () => {
 		if (count < stock) {
@@ -20,13 +20,12 @@ const ItemCount = ({ stock, onAdd, id }) => {
 	}
 
 	const handleClick = (id, cantidad,title,picURL) => {
-		const findProduct = products.find((producto) => producto.id === id)
+		const findProduct = product.find((producto) => producto.id === id)
 
 		if (!findProduct) {
 			alert("Error en la base de datos")
 			return
 		}
-
 		addToCart(findProduct, cantidad,title,picURL)
 		onAdd(count)
 	}

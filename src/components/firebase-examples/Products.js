@@ -1,6 +1,5 @@
 import { collection, getDocs, getFirestore } from "firebase/firestore"
 import { useEffect, useState } from "react"
-import ItemCount from "../ItemCount/ItemCount"
 
 const Products = () => {
 
