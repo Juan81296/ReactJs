@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 
 const Products = () => {
 
-  const [products, setProducts] = useState({})
+  const [products, setProducts] = useState([])
 
   useEffect(() => {
 
@@ -11,7 +11,14 @@ const Products = () => {
 
     const itemsCollection = collection(db,"items");
     getDocs(itemsCollection).then((snapshot)=>{
-      setProducts(snapshot.docs.map((doc) => ({id:doc.id, ...doc.data})))
+      const productList = []
+      snapshot.docs.forEach(s => {
+        console.log(s.data());
+        productList.push({id: s.id, ...s.data()})
+      })
+      console.log(productList)
+      setProducts(productList)
+
     })
 
 
@@ -21,7 +28,17 @@ const Products = () => {
 
 
   return (
-    <div> {products.title} </div>
+    <>
+    <div>
+      {products.map ( p => <li key={p.id}>{p.title}</li> )}
+    </div>
+    <div>
+      {products.map ( p => <li key={p.id}>{p.description}</li> )}
+    </div>
+    <div>
+      {products.map ( p => <li key={p.id}>{p.price}</li> )}
+    </div>
+    </>
   )
 }
 export default Products
