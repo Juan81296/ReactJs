@@ -2,20 +2,41 @@ import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { getItem } from "../../service/asyncmock"
 import ItemList from "./ItemList/ItemList"
-
+import { collection, getDocs, getFirestore} from "firebase/firestore"
 const ItemListContainer = ({ greetings }) => {
-	const [category, setCategory] = useState()
-	const { categoryId } = useParams()
+	// const [category, setCategory] = useState()
+	// const { categoryId } = useParams()
 
+	// useEffect(() => {
+	// 	if (categoryId === undefined) {
+	// 		getItem().then((resp) => setCategory(resp))
+	// 	} else {
+	// 		getItem().then((resp) =>
+	// 			setCategory(resp.filter((product) => product.category === categoryId))
+	// 		)
+	// 	}
+	// }, [categoryId])
+
+	const [products, setProducts] = useState([])
+	
 	useEffect(() => {
-		if (categoryId === undefined) {
-			getItem().then((resp) => setCategory(resp))
-		} else {
-			getItem().then((resp) =>
-				setCategory(resp.filter((product) => product.category === categoryId))
-			)
-		}
-	}, [categoryId])
+	
+		const db = getFirestore()
+	
+		const itemsCollection = collection(db,"items");
+		getDocs(itemsCollection).then((snapshot)=>{
+		  const productList = []
+		  snapshot.docs.forEach(s => {
+			//console.log("PROBANDO",s.data());
+			productList.push({id: s.id, ...s.data()})
+		  })
+		  console.log(productList)
+		  setProducts(productList)
+	
+		})
+
+	
+	  }, [])
 
 	return (
 		<>
@@ -34,7 +55,7 @@ const ItemListContainer = ({ greetings }) => {
 				</div>
 			</div>
 			<div className="divider"></div>
-			<ItemList category={category} />
+			<ItemList category={products} />
 		</>
 	)
 }

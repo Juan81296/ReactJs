@@ -3,9 +3,11 @@ import { Link } from "react-router-dom"
 import cart from "../../cart/Cart"
 import ItemCount from "../../ItemCount/ItemCount"
 
-const ItemDetail = ({ producto }) => {
+const ItemDetail = ({ producto, myId }) => {
 	const { title, brand, price, stock, picUrl, description, category, id } =
 		producto
+		console.log(producto);
+		console.log("PORQUE LLEGA INDEFINIDO", id);
 
 	const [terminar, setTerminar] = useState(false)
 
@@ -39,7 +41,7 @@ const ItemDetail = ({ producto }) => {
 									Terminar Compra
 								</Link>
 							) : (
-								<ItemCount stock={stock} onAdd={onAdd} id={id} />
+								<ItemCount stock={stock} onAdd={onAdd} id={myId} />
 							)}
 						</div>
 					</div>
