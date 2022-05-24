@@ -8,7 +8,7 @@ const Item = ({ producto }) => {
 	return (
 		<>
 			<div className="card card-compact w-96 bg-base-100 shadow-xl">
-					<img src={producto.picURL} alt="Product" />
+					<img style={{height:"500px",width:"auto"}} src={producto.picURL} alt="Product" />
 				<div className="card-body">
 					<h2 className="card-title">{producto.title}</h2>
 					<div className="inline-block align-bottom mr-5">

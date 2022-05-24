@@ -3,11 +3,10 @@ import "./App.css"
 import Cart from "./components/cart/Cart"
 import AppContextProvider from "./components/context/AppContext"
 import CartContextProvider from "./components/context/CartContext"
-import ProductDetail from "./components/firebase-examples/ProductDetail"
-import Products from "./components/firebase-examples/Products"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import NavBar from "./components/NavBar/NavBar"
+import CartEnd from "./components/cart/CartEnd"
 
 function App() {
 	return (
@@ -27,8 +26,8 @@ function App() {
 							/>
 							<Route path="/item/:id" element={<ItemDetailContainer />} />
 							<Route path="/cart" element={<Cart/>} />
-							<Route path="/producto" element={<ProductDetail/>} />
-							<Route path="/productos" element={<Products/>} />
+							<Route path="/cartEnd" element={<CartEnd/>} />
+
 						</Routes>
 					</BrowserRouter>
 				</CartContextProvider>

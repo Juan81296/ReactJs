@@ -13,10 +13,8 @@ const ItemListContainer = ({ greetings }) => {
 		getDocs(itemsCollection).then((snapshot)=>{
 		  const productList = []
 		  snapshot.docs.forEach(s => {
-			//console.log("PROBANDO",s.data());
 			productList.push({id: s.id, ...s.data()})
 		  })
-		  console.log(productList)
 		  setProducts(productList)
 	
 		})

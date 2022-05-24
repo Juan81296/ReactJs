@@ -1,19 +1,15 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
-import cart from "../../cart/Cart"
 import ItemCount from "../../ItemCount/ItemCount"
 
 const ItemDetail = ({ producto, myId }) => {
-	const { title, brand, price, stock, picUrl, description, category, id } =
+	const { title, brand, price, stock, picURL, description, category } =
 		producto
-		console.log(producto);
-		console.log("PORQUE LLEGA INDEFINIDO", id);
 
 	const [terminar, setTerminar] = useState(false)
 
 	const onAdd = (count) => {
 		setTerminar(true)
-		console.log(count)
 	}
 
 	return (
@@ -21,7 +17,7 @@ const ItemDetail = ({ producto, myId }) => {
 			<div className="hero  bg-base-200">
 				<div className="hero-content flex-col lg:flex-row">
 					<img
-						src={picUrl}
+						src={picURL}
 						className="max-w-sm rounded-lg shadow-2xl"
 						alt={`${category}, ${title} de ${brand}`}
 					/>
