@@ -14,11 +14,10 @@ const ItemDetailContainer = () => {
 			const PSG = doc(db,"items",id)
 			getDoc(PSG).then(res => { 
 				if (res.exists()){
-					console.log(res)
 					setItem(res.data())
 				}
 			 })
-		}, [])
+		}, [id])
 	return (
 		<>
 			<div className="container mx-auto my-8 max-w-4xl h-screen">
