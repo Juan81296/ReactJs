@@ -3,6 +3,7 @@ import Item from "../../Item/Item"
 
 
 const ItemList = ({ category }) => {
+	//Este en realidad producto
 	return (
 		<>
 			<div className="container mx-auto flex flex-wrap gap-4 justify-center">

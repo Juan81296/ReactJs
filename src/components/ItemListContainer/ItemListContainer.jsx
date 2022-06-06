@@ -1,26 +1,37 @@
 import React, { useEffect, useState } from "react"
 import ItemList from "./ItemList/ItemList"
-import { collection, getDocs, getFirestore} from "firebase/firestore"
-const ItemListContainer = ({ greetings }) => {
+import { collection, getDocs,  query, where, getFirestore} from "firebase/firestore"
 
+import { useParams } from "react-router-dom"
+//ARTURO
+const ItemListContainer = ({ greetings }) => {
+	const {categoryId} = useParams()
 	const [products, setProducts] = useState([])
 	
 	useEffect(() => {
-	
 		const db = getFirestore()
-	
 		const itemsCollection = collection(db,"items");
-		getDocs(itemsCollection).then((snapshot)=>{
+		 //const qry = categoryId ? query(itemsCollection,  where("category","===" ,categoryId)) : itemsCollection
+		const qry=itemsCollection
+		getDocs(qry).then((snapshot)=>{
 		  const productList = []
 		  snapshot.docs.forEach(s => {
-			productList.push({id: s.id, ...s.data()})
+			  if(categoryId){				  
+				  if(categoryId==s.data().category.id){
+					productList.push({id: s.id, ...s.data()})
+				  }
+				
+			  }else{
+				productList.push({id: s.id, ...s.data()})
+			  }
 		  })
+		  console.log(productList);
 		  setProducts(productList)
 	
 		})
 
 	
-	  }, [])
+	  }, [categoryId])
 
 	return (
 		<>
