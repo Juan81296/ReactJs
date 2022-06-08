@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react"
 import ItemList from "./ItemList/ItemList"
-import { collection, getDocs,  query, where, getFirestore} from "firebase/firestore"
+import { collection, getDocs, getFirestore} from "firebase/firestore"
 
 import { useParams } from "react-router-dom"
-//ARTURO
 const ItemListContainer = ({ greetings }) => {
 	const {categoryId} = useParams()
 	const [products, setProducts] = useState([])
@@ -11,13 +10,12 @@ const ItemListContainer = ({ greetings }) => {
 	useEffect(() => {
 		const db = getFirestore()
 		const itemsCollection = collection(db,"items");
-		 //const qry = categoryId ? query(itemsCollection,  where("category","===" ,categoryId)) : itemsCollection
 		const qry=itemsCollection
 		getDocs(qry).then((snapshot)=>{
 		  const productList = []
 		  snapshot.docs.forEach(s => {
 			  if(categoryId){				  
-				  if(categoryId==s.data().category.id){
+				  if(categoryId===s.data().category.id){
 					productList.push({id: s.id, ...s.data()})
 				  }
 				

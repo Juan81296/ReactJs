@@ -12,13 +12,13 @@ const CartListCard = ( { product } ) => {
 
 
     return (
-      <div className="card card-compact w-96 bg-base-100 shadow-xl">
+      <div className="card card-compact w-96 bg-base-100 shadow-xl" style={{opacity:"0.9",backgroundColor:"gray",width:"auto"}}>
         	<figure>
-					<img style={{height:"150px",width:"150px"}} src={product.picURL} alt="Product" />
+					<img style={{height:"auto"}} src={product.picURL} alt="Product" />
 				</figure>
-         <strong style={{fontSize:"20px"}}>{product.title}</strong>
-          <h1 style={{fontWeight:"bolder",fontSize:"15px",color:"darkBlue"}}> Cantidad de este producto: {product.quantity} </h1>
-          <h1 style={{fontWeight:"bolder",fontSize:"13px",color:"darkGreen"}}> Total: ${unitPlusPrice} </h1>
+         <strong style={{fontSize:"30px",textAlign:"center"}}>{product.title}</strong>
+          <h1 style={{fontSize:"25px",color:"black",textAlign:"center"}}> Cantidad de este producto: {product.quantity} </h1>
+          <h1 style={{fontSize:"30px",color:"darkGreen",fontWeight:"bolder",textAlign:"center"}}> Subtotal: ${unitPlusPrice} </h1>
 
 
           <button
