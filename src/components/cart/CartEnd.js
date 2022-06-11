@@ -54,7 +54,7 @@ const CartEnd = () => {
       			<div
 				className="hero min-h-screen"
 				style={{
-					backgroundImage: `url('https://img.wallpapersafari.com/tablet/2560/1700/13/98/wXBb2H.jpg')`,
+					backgroundImage: `url('https://www.panenka.org/wp-content/uploads/2018/09/29776_3.jpg')`,
 				}}
 			>
       <form style={{display:"flex"}} onSubmit={saveData}>

@@ -11,7 +11,7 @@ import CartEnd from "./components/cart/CartEnd"
 function App() {
 	return (
 		<>
-		<div style={{backgroundColor:"#3A3A3A"}}>
+		<div style={{backgroundImage:'url(https://wallpapercave.com/wp/wc1712879.jpg)',height:"auto"}}>
 			<AppContextProvider>
 				<CartContextProvider>
 					<BrowserRouter>

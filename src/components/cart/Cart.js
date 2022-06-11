@@ -16,7 +16,7 @@ import CartListCard from "./CartListCard"
 			>
       <div style={{height:"800px"}}>
       <div style={{textAlign:"center"}}></div>
-      <h2 style={{fontSize:"60px",textTransform:"uppercase", textAlign:"center",color:"#C9D555",fontFamily:"monospace"}}>Tu compra</h2>
+      <h2 style={{fontSize:"50px",textTransform:"uppercase", textAlign:"center",color:"#C9D555",fontFamily:"monospace"}}>Tu compra</h2>
       <button
         className="btn btn"
         style={{marginBottom:"20px",color:"#BC4141",fontSize:"20px"}}
@@ -29,7 +29,7 @@ import CartListCard from "./CartListCard"
       <div style={{display:"flex"}}>
       { cart.map( f => <div key={f.id}><CartListCard  product={f}/></div> ) }
       </div>
-      <h1 style={{fontSize:"50px",color:"#C9D555",fontFamily:"monospace", textAlign:"center",textTransform:"uppercase"}}>Monto total en tu carrito: $ {finalPrice()} </h1>
+      <h1 style={{fontSize:"30px",color:"#C9D555",fontFamily:"monospace", textAlign:"center",textTransform:"uppercase"}}>Monto total en tu carrito: $ {finalPrice()} </h1>
       <Link to={`/cartEnd`} className="btn btn btn-lg btn-block">
 							Ir a finalizar compra
 						</Link>

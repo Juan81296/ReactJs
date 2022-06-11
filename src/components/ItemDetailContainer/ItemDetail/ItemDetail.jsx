@@ -14,8 +14,8 @@ const ItemDetail = ({ producto, myId }) => {
 
 	return (
 		<>
-			<div className="hero  bg-base-200">
-				<div className="hero-content flex-col lg:flex-row" style={{backgroundColor:"#3A3A3A",color:"white"}}>
+			<div className="hero  bg-base-200" >
+				<div className="hero-content flex-col lg:flex-row" style={{backgroundColor:"black",color:"white"}}>
 					<img
 						src={picURL}
 						className="max-w-sm rounded-lg shadow-2xl"
