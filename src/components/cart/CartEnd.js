@@ -11,7 +11,7 @@ const CartEnd = () => {
  
 
   const {cart,finalPrice} = useCartContext()
-  const cartItems = cart.map(c => ({title:c.title, price:c.price,quantity:c.quantity}))
+  var cartItems = cart.map(c => ({title:c.title, price:c.price,quantity:c.quantity}))
   const cartShowClient = cart.map(c => (c.title))
                      
   const initialValue = {
@@ -35,7 +35,7 @@ const CartEnd = () => {
     try {
       await addDoc(collection(db,"datosCompra"),{
         ...user,
-        ...order
+        ...order,
       })
       
     } catch (error) {
@@ -44,7 +44,9 @@ const CartEnd = () => {
     
     setUser({...initialValue})
     swal(`Muchas Gracias por tu compra, ${user.name}! Has adquirido :  ${JSON.stringify(cartShowClient)}. Precio total: $${finalPrice()}  A continuación enviaremos a tu mail el los pasos a seguir.`)
+     cartItems = null
   }
+
 
   
     return (

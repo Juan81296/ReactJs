@@ -23,7 +23,6 @@ const ItemListContainer = ({ greetings }) => {
 				productList.push({id: s.id, ...s.data()})
 			  }
 		  })
-		  console.log(productList);
 		  setProducts(productList)
 	
 		})

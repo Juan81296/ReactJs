@@ -23,8 +23,11 @@ import CartListCard from "./CartListCard"
         onClick={ () => { deleteCart() } }>
           Vaciar lista
       </button>
+      <Link to={`/`} className="btn btn"style={{marginBottom:"20px",marginLeft:"80px" , color:"green",fontSize:"30px",fontFamily:"fantasy"}} >
+							Seguir comprando
+						</Link>
       <div style={{display:"flex"}}>
-      { cart.map( f => <div><CartListCard key={f.id} product={f}/></div> ) }
+      { cart.map( f => <div key={f.id}><CartListCard  product={f}/></div> ) }
       </div>
       <h1 style={{fontSize:"40px",color:"#F9FFCE",fontFamily:"fantasy"}}>Monto total en tu carrito: $ {finalPrice()} </h1>
       <Link to={`/cartEnd`} className="btn btn-btn">

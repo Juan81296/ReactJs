@@ -3,7 +3,7 @@ import { useAppContext } from "../context/AppContext"
 import { useCartContext } from "../context/CartContext"
 
 const ItemCount = ({ stock, onAdd, id }) => {
-	const [count, setCount] = useState(0)
+	const [count, setCount] = useState(1)
 
 	const { addToCart } = useCartContext()
 	const { products } = useAppContext()
@@ -14,7 +14,7 @@ const ItemCount = ({ stock, onAdd, id }) => {
 		}
 	}
 	const handleRemove = () => {
-		if (count > 0) {
+		if (count > 1) {
 			setCount(count - 1)
 		}
 	}
