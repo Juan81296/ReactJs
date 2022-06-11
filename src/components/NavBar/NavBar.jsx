@@ -5,7 +5,7 @@ import CartWidget from "./CartWidget/CartWidget"
 const NavBar = () => {
 	return (
 		<>
-			<div className="navbar bg-base-100">
+			<div className="navbar bg-dark-100" style={{textTransform:"uppercase",color:"white",fontFamily:"monospace",fontSize:"18px"}}>
 				<div className="navbar-start">
 					<div className="dropdown">
 						<label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -36,7 +36,7 @@ const NavBar = () => {
 							</li>
 						</ul>
 					</div>
-					<Link to="/" className="btn btn-ghost normal-case text-xl">
+					<Link to="/" className="btn btn-ghost normal-case text-xl" style={{fontSize:"50px",fontFamily:"monospace",textTransform:"uppercase"}}>
 						Tango
 					</Link>
 				</div>

@@ -11,6 +11,7 @@ import CartEnd from "./components/cart/CartEnd"
 function App() {
 	return (
 		<>
+		<div style={{backgroundColor:"#3A3A3A"}}>
 			<AppContextProvider>
 				<CartContextProvider>
 					<BrowserRouter>
@@ -32,6 +33,7 @@ function App() {
 					</BrowserRouter>
 				</CartContextProvider>
 			</AppContextProvider>
+			</div>
 		</>
 	)
 }

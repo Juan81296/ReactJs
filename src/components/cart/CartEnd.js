@@ -54,22 +54,22 @@ const CartEnd = () => {
       			<div
 				className="hero min-h-screen"
 				style={{
-					backgroundImage: `url('https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/06/26153648/Argentina-vs-Nigeria-Mundial-Rusia-2018-101.jpg')`,
+					backgroundImage: `url('https://img.wallpapersafari.com/tablet/2560/1700/13/98/wXBb2H.jpg')`,
 				}}
 			>
       <form style={{display:"flex"}} onSubmit={saveData}>
         <div className="card card-body">
           <div className="form-group">
-            <input type="text" name="name" className="input input-bordered input-accent w-full max-w-xs" placeholder="Ingrese su nombre"
+            <input type="text" name="name" className="input input-bordered input w-full max-w-xs" placeholder="Ingrese su nombre"
             onChange={inputCapture} value={user.name} style={{width:"auto"}} />
 
-            <input type="email" name="mail" className="input input-bordered input-accent w-full max-w-xs" placeholder="Ingrese su mail"
+            <input type="email" name="mail" className="input input-bordered input w-full max-w-xs" placeholder="Ingrese su mail"
             onChange={inputCapture} value={user.mail}  style={{width:"auto"}} />
 
-            <input type="number" name="phone" className="input input-bordered input-accent w-full max-w-xs" placeholder="Ingrese su celular"
+            <input type="number" name="phone" className="input input-bordered input w-full max-w-xs" placeholder="Ingrese su celular"
             onChange={inputCapture} value={user.phone}  style={{width:"auto"}} />
           </div>
-          <button type="submit"className="btn btn-success" >Finalizar compra</button>
+          <button type="submit"className="btn btn" >Finalizar compra</button>
         </div>
         </form>
         </div>

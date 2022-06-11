@@ -33,19 +33,20 @@ const ItemCount = ({ stock, onAdd, id }) => {
 
 	return (
 		<>
+			
 			<div className="flex gap-4 mt-4">
 				<div className="flex flex-row">
-					<button className="btn btn-success" onClick={handleRemove}>
+					<button className="btn btn" onClick={handleRemove}>
 						<i className="fas fa-minus"></i>
 					</button>
 					<label className="alert alert-white">{count}</label>
-					<button className="btn btn-success" onClick={handleAdd}>
+					<button className="btn btn" onClick={handleAdd}>
 						<i className="fas fa-plus"></i>
 					</button>
 				</div>
 				<div>
 					<button
-						className="btn btn-success"
+						className="btn btn"
 						onClick={() => handleClick(id, count,)}
 					>
 						Agregar al Carrito

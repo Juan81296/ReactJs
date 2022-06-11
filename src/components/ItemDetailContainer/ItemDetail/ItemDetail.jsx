@@ -15,13 +15,13 @@ const ItemDetail = ({ producto, myId }) => {
 	return (
 		<>
 			<div className="hero  bg-base-200">
-				<div className="hero-content flex-col lg:flex-row">
+				<div className="hero-content flex-col lg:flex-row" style={{backgroundColor:"#3A3A3A",color:"white"}}>
 					<img
 						src={picURL}
 						className="max-w-sm rounded-lg shadow-2xl"
 						alt={`${category}, ${title} de ${brand}`}
 					/>
-					<div>
+					<div  style={{color:"#DFDB5C"}}>
 						<h1 className="text-3xl font-bold">{brand}</h1>
 						<h2 className="text-5xl font-bold">{title}</h2>
 						<p className="py-6">{description}</p>
