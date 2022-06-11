@@ -24,7 +24,7 @@ import CartListCard from "./CartListCard"
           Vaciar lista
       </button>
       <Link to={`/`} className="btn btn"style={{marginBottom:"20px",marginLeft:"80px" , color:"green",fontSize:"20px",fontFamily:"fantasy"}} >
-							Seguir comprando
+							Volver
 						</Link>
       <div style={{display:"flex"}}>
       { cart.map( f => <div key={f.id}><CartListCard  product={f}/></div> ) }
