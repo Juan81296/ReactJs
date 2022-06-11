@@ -23,7 +23,7 @@ import CartListCard from "./CartListCard"
         onClick={ () => { deleteCart() } }>
           Vaciar lista
       </button>
-      <Link to={`/`} className="btn btn"style={{marginBottom:"20px",marginLeft:"80px" , color:"green",fontSize:"30px",fontFamily:"fantasy"}} >
+      <Link to={`/`} className="btn btn"style={{marginBottom:"20px",marginLeft:"80px" , color:"green",fontSize:"20px",fontFamily:"fantasy"}} >
 							Seguir comprando
 						</Link>
       <div style={{display:"flex"}}>
