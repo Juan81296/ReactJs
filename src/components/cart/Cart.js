@@ -11,7 +11,7 @@ import CartListCard from "./CartListCard"
           			<div
 				className="hero min-h-screen"
 				style={{
-					backgroundImage: `url('https://i.pinimg.com/originals/45/71/da/4571da034ee71774cd41c4ee4462b8e0.jpg')`,
+					backgroundImage: `url('https://i.pinimg.com/originals/45/71/da/4571da034ee71774cd41c4ee4462b8e0.jpg')`,width:"auto",height:"1500px"
 				}}
 			>
       <div style={{height:"800px"}}>
@@ -23,14 +23,14 @@ import CartListCard from "./CartListCard"
         onClick={ () => { deleteCart() } }>
           Vaciar lista
       </button>
-      <Link to={`/`} className="btn btn"style={{marginBottom:"20px",marginLeft:"80px" , color:"green",fontSize:"20px",fontFamily:"fantasy"}} >
-							Volver
+      <Link to={`/`} className="btn btn"style={{marginBottom:"20px",marginLeft:"80px", color:"green",fontSize:"20px",fontFamily:"fantasy"}} >
+							Seguir comprando
 						</Link>
       <div style={{display:"flex"}}>
       { cart.map( f => <div key={f.id}><CartListCard  product={f}/></div> ) }
       </div>
-      <h1 style={{fontSize:"40px",color:"#F9FFCE",fontFamily:"fantasy"}}>Monto total en tu carrito: $ {finalPrice()} </h1>
-      <Link to={`/cartEnd`} className="btn btn-btn">
+      <h1 style={{fontSize:"50px",color:"#F9FFCE",fontFamily:"fantasy",textAlign:"center"}}>Monto total en tu carrito: $ {finalPrice()} </h1>
+      <Link to={`/cartEnd`} className="btn btn-primary btn-lg btn-block">
 							Finalizar Compra
 						</Link>
             </div>
